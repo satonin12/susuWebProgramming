@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+
+<head>
+  <meta charset=utf-8>
+  <style>
+    body {
+      background-color: gray;
+      min-height: 50px;
+    }
+    table {
+      border: 1px solid black;
+    }
+    thead {
+      background-color: cyan;
+      border: 1px solid black;
+    }
+    tr,td {
+      border: 1px solid black;
+    }
+  </style>
+  <script>
+    var z = new Array(
+      new Array("Иванов", 3),
+      new Array("Петров", 4),
+      new Array("Сидоров", 5),
+      new Array("Романов", 3),
+      new Array("Македонский", 2),
+      new Array("Барбаросса", 4),
+      new Array("Цезарь", 5),
+      new Array("Бендер", 5)
+    );
+  </script>
+</head>
+
+<body>
+    <script>
+      /* ЗДЕСЬ СОЗДАЁТСЯ ТАБЛИЦА и ЗАПОЛНЯЕТСЯ
+      ДАННЫМИ ИЗ МАССИВА z */
+      var table = document.createElement('table');
+      var thead = document.createElement('thead');
+      var tr = document.createElement('tr');
+      var td = document.createElement('td');
+      var td1 = document.createElement('td');
+      var surname = document.createTextNode('Фамилия');
+      var rating = document.createTextNode('Оценка');
+      td.appendChild(surname);
+      td1.appendChild(rating);
+      tr.appendChild(td);
+      tr.appendChild(td1);
+      thead.appendChild(tr);
+      table.appendChild(thead);
+
+      var tbody = document.createElement('tbody');
+      for (var i = 0; i < z.length; i++) {
+        var tr = document.createElement('tr');
+        var td = document.createElement('td');
+        var td1 = document.createElement('td');
+        var sn = document.createTextNode(z[i][0]);
+        var rt = document.createTextNode(z[i][1]);
+        td.appendChild(sn);
+        td1.appendChild(rt);
+        td1.style.textAlign="right";
+        tr.appendChild(td);
+        tr.appendChild(td1);
+        tbody.appendChild(tr);
+      }
+      table.appendChild(tbody);
+      document.body.appendChild(table);
+    </script>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

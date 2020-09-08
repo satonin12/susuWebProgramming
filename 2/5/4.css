@@ -1,0 +1,21 @@
+/*Do not remove and do not change this string*/
+html,body{
+    height: 100%;
+}
+.wrap{
+    position: relative;
+    width: 50%;
+    margin: 0px auto;
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+.contentdiv{
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 20px;
+}
+/*Do not remove and do not change this string*/

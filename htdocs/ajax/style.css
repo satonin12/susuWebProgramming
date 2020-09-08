@@ -1,0 +1,22 @@
+body{
+  background-color: gold;
+}
+.content{
+  position: relative;
+  width: 50%;
+  margin: 0px auto;
+  height: auto !important;
+  height: 100%;
+  padding: 0px;
+}
+form{
+  background-color: yellow;
+  border: 3px solid red;
+  size: 4;
+  vertical-align: top;
+  height: 300px;
+  line-height: 40px;
+}
+form #butt{
+  color: blue;
+}

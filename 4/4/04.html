@@ -1,0 +1,46 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+
+<head>
+  <title>Таблица в клеточку</title>
+  <meta charset="utf-8">
+  <style>
+    table{
+      margin: 10px;
+      width: auto;
+      height: auto;
+    }
+    tr, td{
+      width: 10px;
+      height: 10px;
+    }
+  </style>
+  <script>
+    function tablica_v_kletky(ii, jj, color1, color2) {
+
+      var table = document.createElement("table");
+      for (var i = 1; i <= ii; i++) {
+        var tr = document.createElement('tr');
+        for (var j = 1; j <= jj; j++) {
+          var td = document.createElement('td');
+          if (i % 2 == j % 2) {
+            td.bgColor=color1;
+          } else {
+            td.bgColor=color2;
+          }
+          tr.appendChild(td);
+        }
+        table.appendChild(tr);
+      }
+      document.body.appendChild(table);
+
+    }
+  </script>
+</head>
+
+<body onload="tablica_v_kletky(40,30,'#AAAAFF','#FFAAAA');">
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

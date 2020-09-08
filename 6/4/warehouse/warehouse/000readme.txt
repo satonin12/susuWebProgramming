@@ -1,0 +1,1 @@
+Это БД MySql Склад (warehouse)

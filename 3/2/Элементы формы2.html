@@ -1,0 +1,144 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+
+<head>
+  <title>Элементы формы</title>
+  <meta charset="utf-8">
+  <style>
+    .content {
+      position: relative;
+      width: 50%;
+      margin: 10px auto;
+      padding: 10px;
+      background-color: grey;
+    }
+    #contact {
+      size: "4";
+      vertical-align: top;
+    }
+    fieldset{
+      border: 1px solid black;
+    }
+    .check{
+      display: flex-block;
+      align-items: flex-start;
+    }
+    em{
+      color: red;
+    }
+    select{
+      width: 205px;
+    }
+    textarea{
+      width: 200px;
+      height: 100px;
+    }
+    .field{
+      clear: both;
+      text-align: right;
+      line-height: 25px;
+    }
+    .field input{
+      width: 200px;
+    }
+    label{
+      float: left;
+      padding-right: 50px;
+      width: 70px;
+      text-align: left;
+    }
+    .main_content{
+      float: left;
+    }
+    .row{
+      clear:both;
+    }
+    .col{
+      float: left;
+    }
+    .col.span1{
+      width: 100px;
+    }
+    .col.span2{
+      width: 100px;
+    }
+    .col.span3{
+      width: 100px;
+    }
+    .col.span4{
+      width: 100px;
+    }
+    .col.span5{
+      width: 100px;
+    }
+    .col.span6{
+      width: 100px;
+    }
+    .col.span7{
+      width: 100px;
+    }
+    .col.span8{
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+      <p>Пожалуйста, заполните форму. Обязательное поле помечены <em>*</em></p>
+      <form name="contact us" id="contact" action="" method="post">
+
+        <fieldset>
+          <legend class="form" id="contact">КОНТАКТНАЯ ИНФОРМАЦИЯ</legend>
+          <div class="main_content">
+            <div class="field"><label for="n">Имя <em>*</em></label> <input type="text" name="firstname" required ><br></div>
+            <div class="field"><label for="tn">Телефон</label> <input type="tel" name="telephone" placeholder="+7 (xxx) xxx-xxxx"><br></div>
+            <div class="field"><label for="em">Email <em>*</em></label> <input type="email" name="email" placeholder="muk07@mail.ru" required ></div>
+          </div>
+        </fieldset><br>
+
+        <fieldset>
+            <legend class="form" id="contact">ПЕРСОНАЛЬНАЯ ИНФОРМАЦИЯ</legend>
+            <div class="main_content">
+            <div class="field"><label>Возраст <em>*</em></label> <input type="number" name="number" required ><br></div>
+            <div class="field">
+              <label>Пол </label>
+              <select name="sex" class="sex">
+                <option value="мужской" selected>Мужской</option>
+                <option value="женский">Женский</option>
+              </select><br>
+            </div>
+            <div class="field"><label>Перечислите личные качества</label><textarea></textarea></div>
+          </div>
+        </fieldset><br>
+
+        <fieldset>
+          <legend class="form" id="contact">ВЫБЕРИТЕ ВАШИХ ЛЮБИМЫХ ЖИВОТНЫХ</legend>
+          <div class="wrapper">
+            <div class="row">
+              <div class="col span1"><input type="checkbox" name="pets" value="zebra">Зебра</div>
+              <div class="col span2"><input type="checkbox" name="pets" value="cat">Кошка</div>
+              <div class="col span3"><input type="checkbox" name="pets" value="anaconda">Анаконда</div>
+            </div>
+
+            <div class="row">
+              <div class="col span4"><input type="checkbox" name="pets" value="human">Человек</div>
+              <div class="col span5"><input type="checkbox" name="pets" value="elephant">Слон</div>
+              <div class="col span6"><input type="checkbox" name="pets" value="antelope">Антилопа</div>
+            </div><br>
+
+            <div class="row">
+              <div class="col span7"><input type="checkbox" name="pets" value="dove">Голубь</div>
+              <div class="col span8"><input type="checkbox" name="pets" value="crab">Краб</div>
+            </div><br>
+          </div>
+        </fieldset><br>
+
+      </form>
+      <button value="отправить информацию" form="contact" formaction="" formmethod="POST">Отправить информацию</button>
+  </div>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

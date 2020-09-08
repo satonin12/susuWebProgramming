@@ -1,0 +1,106 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+<!-- здесь будет ваше решение -->
+    <head>
+        <meta charset="utf-8">
+        <title>Элементы формы</title>
+    </head>
+
+    <body>
+        <h2 align="center">Элементы формы</h2>
+        <hr color="blue" width="600" size="5">
+        <table align="center" border="1">
+            <tr>
+                <td align="center">
+                    <p><b>Поле ввода</b></p>
+                    <form>
+                        Продукт:<input type="text" name="product" value="Шоколад"><br>
+                        Стоимость:<input type="text" name="price" value="42р.">
+                    </form>
+                </td>
+                <td align="center">
+                    <p><b>Поле ввода и пароль</b></p>
+                    <form>
+                        Login:<br><input type="text" name="login" value="Иванов"><br>
+                        Password:<br><input type="password" name="password">
+                    </form>
+                </td>
+                <td align="left">
+                    <p><b>Радиокнопки</b></p>
+                    <form>
+                        Надпись на кнопке (button) определяется атрибутом:<br>
+                        <input type="radio" name="radio" value="name" checked> name<br>
+                        <input type="radio" name="radio" value="value"> value<br>
+                        <input type="radio" name="radio" value="bgcolor"> bgcolor<br>
+                        <input type="radio" name="radio" value="id"> id<br>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <p><b>Выбор файла</b></p>
+                    <form>
+                        Выберите файл для передачи на сервер<br>
+                        <input type="file" name="file"><br>
+                        <input type="submit" name="file" value="Загрузить файл">
+                    </form>
+                </td>
+                <td align="left">
+                    <p><b>Списки выбора (выбор единственного значения)</b></p>
+                    <form>
+                        Какое время года вам нравится больше других ?<br>
+                        <select name="season">
+                            <option value="осень" selected>осень</option>
+                            <option value="лето">лето</option>
+                            <option value="весна">весна</option>
+                            <option value="зима">зима</option>
+                        </select>
+                    </form>
+                </td>
+                <td>
+                    <p><b>Списки выбора (множественный выбор)</b></p>
+                    <form>
+                        Выберите правильные утверждения<br>
+                        <select name="trfls" size=4 multiple>
+                            <option value="1" selected>на улице идет дождь-берите зонт</option>
+                            <option value="2">дождь идет только по четвергам</option>
+                            <option value="3" selected>после дождичка наступает четверг</option>
+                            <option value="4">пятница на неделе от 1 до 7</option>
+                        </select>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <p><b>TEXTAREA</b></p>
+                    <form>
+                        <textarea name="text" rows=10 cols=40></textarea>
+                    </form>
+                </td>
+                <td align="left">
+                    <p><b>FIELDSET и LEGEND</b></p>
+                    <form name="MyForm">
+                        <fieldset size="100">
+                            <legend><font color="blue" size="4">Личные данные</font></legend>
+                            Имя:<input tupe="text" name="firstname" value="Вася"><br>
+                            Фамилия:<input type="text" name="lastname" value="петров"><br>
+                            Пол:<input type="radio" name="Sex" value="м" checked>Мужской
+                            <input type="radio" name="Sex" value="ж">Женский
+                        </fieldset>
+                    </form>
+                </td>
+                <td align="center">
+                    <p><b>Кнопки</b></p>
+                    <form>
+                        <input type="submit" name = "button" value="кнопка submit"><br><br>
+                        <input type="reset" name = "button" value="кнопка reset"><br><br>
+                        <input type="button" name = "button" value="кнопка button">
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+    </body>
+</html>
+<!-- Do not remove and do not change this string -->

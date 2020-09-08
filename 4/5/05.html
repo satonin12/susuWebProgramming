@@ -1,0 +1,103 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+
+<head>
+  <title> Простенький калькулятор </title>
+  <meta charset=utf-8>
+  <style>
+    header {
+      text-align: center;
+    }
+    table {
+      border: 1px solid black;
+    }
+    thead {
+      background-color: cyan;
+      text-align: center;
+    }
+    tr, td {
+      border: 1px solid black;
+    }
+    .center {
+      text-align: center;
+    }
+    .right {
+      text-align: right;
+    }
+    button {
+      size: auto;
+    }
+  </style>
+  <script>
+    function calc() {
+      var n1 = parseFloat(document.getElementById("operand1").value);
+      var n2 = parseFloat(document.getElementById("operand2").value);
+      var e = document.getElementById("operacia");
+      var operac = e.options[e.selectedIndex].text;
+      if (isNaN(n1) || isNaN(n2)) {
+        alert("Неверно введены операнды");
+      }
+      var r;
+      switch (operac) {
+        case '+':
+          r = n1 + n2;
+          break;
+        case '-':
+          r = n1 - n2;
+          break;
+        case '*':
+          r = n1 * n2;
+          break;
+        case '/':
+          r = n1 / n2;
+          break;
+      }
+      if(isNaN(r)){
+        alert("Нет представления как можно представить результат");
+      }else{
+        document.getElementById("rez").innerHTML = r;
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <h3>Простенький калькулятор</h3>
+  </header>
+  <table>
+    <thead>
+      <tr>
+        <td>Первый операнд</td>
+        <td>Операция</td>
+        <td>Второй операнд</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="center">
+          <!-- step="any" -->
+        <td><input type="text" id="operand1"></td>
+        <td>
+          <select id="operacia">
+            <option value="+" selected>+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </select>
+        </td>
+        <td><input type="text" id="operand2"></td>
+      </tr>
+      <tr>
+        <td class="center">
+          <button onclick="calc()">Выполнить</button>
+        </td>
+        <td class="right">Результат</td>
+        <td id="rez"></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

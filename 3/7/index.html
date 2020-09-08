@@ -1,0 +1,105 @@
+﻿<!-- Do not remove and do not change this string -->
+<!DOCTYPE HTML>
+<html lang=ru>
+
+<head>
+	<title>Псевдоклассы</title>
+	<meta charset="utf-8">
+	<style>
+		body{
+			display: block;
+		}
+		table {
+			border: 2px solid black;
+			text-align: center;
+		}
+		thead{
+			font-weight: bold;
+			background-color: rgb(163, 131, 163);
+		}
+		tbody{
+			color: black;
+			font-size: 14pt;
+		}
+		tbody tr:nth-of-type(odd){
+			background-color:#AAF
+		}
+		tbody tr:nth-of-type(even){
+			background-color:#AFA
+		}
+		tbody tr td::first-letter{
+			color: blue;
+			font-size: 18pt;
+		}
+		tbody tr td:hover{
+			color: red;
+		} 
+		tfoot{
+			background-color: rgb(133, 184, 153);
+		}
+		tr,td {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+
+<body>
+	<p>Список некоторых лиц</p>
+
+	<table>
+		<thead>
+			<tr>
+				<td>Фамилия</td>
+				<td>Дата рождени</td>
+				<td>Пол</td>
+				<td>email</td>
+				<td>Адрес</td>
+			</tr>
+		</thead>
+			<tbody>
+				<tr>
+					<td>Иванов</td>
+					<td>23.03.1970</td>
+					<td>Муж.</td>
+					<td>Iv@yy.ru</td>
+					<td>Проспект Ленина 85 ауд 333/3б</td>
+				</tr>
+				<tr>
+					<td>Петров</td>
+					<td>22.13.1988</td>
+					<td>Жен.</td>
+					<td>Ppp@ss.tt</td>
+					<td>За углом</td>
+				</tr>
+				<tr>
+					<td>Сидоров</td>
+					<td>44.01.2015</td>
+					<td>Средн.</td>
+					<td>Нет адреса</td>
+					<td>Лондон-сити</td>
+				</tr>
+				<tr>
+					<td>Бендер</td>
+					<td>01.01.2000</td>
+					<td>Муж.</td>
+					<td>Www@google.ru</td>
+					<td>Бомж</td>
+				</tr>
+				<tr>
+					<td>Убейволк</td>
+					<td>07.07.1999</td>
+					<td>Ж.</td>
+					<td>Не знаю</td>
+					<td>Бомж</td>
+				</tr>
+			</tbody>
+		<tfoot>
+			<tr>
+				<td colspan="5">Всего 5 человек</td>
+			</tr>
+		</tfoot>
+	</table>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+
+<head>
+	<title>Решить уравнение</title>
+	<meta charset="utf-8">
+	<script>
+		function rec() {
+
+			let yr = document.getElementById('val').value;
+			let count = yr.replace(/[^a-z]/g, '').length;
+			let a = -10;
+			let b = 10;
+			let c;
+			let e = 0.0005;
+			var a1, b1, c1;
+			while ((b - a) > e) {
+				if (count === 0) {
+					b = yr;
+					break;
+				}
+				if (a < 0) {
+					a1 = yr.replace(/x/g, a);
+					a1 = a1.replace(/(--)/, '+');
+					a1 = eval(a1);
+				} else {
+					a1 = eval(yr.replace(/x/g, a));
+				}
+				b1 = eval(yr.replace(/x/g, b));
+				c = (a + b) / 2;
+				c1 = eval(yr.replace(/x/g, c));
+				if (c1 === 0) {
+					a = c;
+					b = c;
+					break;
+				}
+				if (a1 * c1 <= 0) {
+					b = c;
+				} else {
+					a = c;
+					// console.log(a, b, c);
+				}
+			}
+			var span = document.getElementById('reshenie');
+			var root = "Корень=";
+			span.textContent = root + b;
+		}
+	</script>
+</head>
+
+<body>
+	<div>
+		<p>Уравнение
+			<input type="text" name="str" id="val">=0
+		</p>
+		<input type="button" name="rec" value="Решить" onclick="rec()">
+	</div>
+	<span id="reshenie"></span>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

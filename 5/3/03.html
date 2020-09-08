@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+
+<head>
+    <meta charset="utf-8">
+    <title>Select в ячейках таблицы</title>
+    <style>
+        body {
+            min-height: 50px;
+        }
+        table {
+            border: 1px solid black;
+            vertical-align: center;
+            text-align: center;
+        }
+        tr, td {
+            border: 1px solid blue;
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+    <script>
+        var z = new Array(
+            "один",
+            "два",
+            "три",
+            "четыре",
+            "пять"
+        );
+    </script>
+</head>
+
+<body>
+    <script>
+        var table = document.createElement("table");
+        table.setAttribute("id", "table1");
+        var tr = table.insertRow(0);
+        for (var i = 0; i < 8; i++) {
+            var td = tr.insertCell(i);
+            td.setAttribute("id", i);
+        }
+        table.appendChild(tr);
+        document.body.appendChild(table);
+
+        var sel = document.createElement("select");
+        sel.setAttribute("id", "sel");
+        for (var i = 0; i < 5; i++) {
+            var opt = document.createElement("option");
+            var text = document.createTextNode(z[i]);
+            opt.appendChild(text);
+            sel.appendChild(opt);
+        }
+        document.getElementById("0").appendChild(sel);
+
+        var button1=document.createElement("button");
+        button1.setAttribute("id", "btn");
+        var textButton=document.createTextNode("Переместить");
+        button1.appendChild(textButton);
+        document.body.appendChild(button1);
+
+        button1.onclick=function(){
+            var nextChild=sel.parentElement.nextElementSibling;
+            var currentId=nextChild.id;
+            if(currentId!=null){
+                document.getElementById(currentId).appendChild(sel);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

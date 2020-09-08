@@ -1,0 +1,47 @@
+/*Do not remove and do not change this string*/
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: blueviolet;
+
+}
+.header{
+    text-align: center;
+}
+.block{
+    display: flex;
+    justify-content: row;
+}
+.block1{
+    background-color: gainsboro;
+    width: 20%;
+    height: 1000px;
+    text-align: center;
+}
+.block2{
+    background-image: url(./fon.jpg);
+    text-align: center;
+    color: blue;
+    font-size: 20pt;
+    width:60%;
+    height: 1000px;
+    margin: 0px 5px;
+}
+.block3{
+    background-color: aquamarine;
+    text-align: center;
+    width: 20%;
+}
+.text{
+    font-size: 18pt;
+}
+.footer{
+    background-color: rgb(56, 189, 89);
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    padding: 20px;
+}
+/*Do not remove and do not change this string*/

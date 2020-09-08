@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+
+<head>
+	<meta charset=utf-8>
+	<script src="ComboBox.js">
+
+		var yourData=[
+			[ [1,'Первый'],
+			[2,'Второй'],
+			[3,'Третий'],],
+			[ [4,'Первый'],
+			[5,'Второй'],
+			[6	,'Третий'],],
+
+		];
+	</script>
+	<style>
+	</style>
+</head>
+
+<body>
+	<div id="selec"></div>
+	<button id="switch">Click Me</button>
+	<script>
+		var yourData=[
+			[ [1,'Первый'],
+			[2,'Второй'],
+			[3,'Третий'],],
+			[ [1,'First'],
+			[2,'Two'],
+			[3,'Third'],],
+
+		];
+		// console.log(yourData);
+		var count=0;
+		var s=document.getElementById('selec');
+		var butt=document.getElementById('switch');
+		var cb=new ComboBox(s,count,yourData[count]);
+		var lArr= yourData.length;
+		console.log(count);
+		// console.log(lArr);
+		// console.log(yourData[0]);
+		count++;
+		cb.Draw();
+		butt.onclick = e =>{
+			
+			// console.log(lArr);
+			cb=new ComboBox(s,count,yourData[count]);
+				// console.log(yourData[count]);
+				cb.Draw();
+				// console.log(count);
+				count++;
+			if(count===lArr){
+				count=0;
+			}
+		};
+
+		/* помимо изображенного
+		в readme, следует выдавать какой нибудь alert
+		при изменении выбора в select (параметр OnChange в ComboBox.js)*/
+	</script>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

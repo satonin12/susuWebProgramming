@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+
+<head>
+  <meta charset="utf-8">
+  <title>Радиальный градиент</title>
+  <style>
+    table {
+      text-align: center;
+      width: 600px;
+      height: 300px;
+    }
+    .content{
+      font-size: 20pt;
+    }
+    tr,td {
+      border: 2px solid black;
+      border-radius: 20px;
+      vertical-align: top;
+      color: white;
+    }
+    .grad1 {
+      background: radial-gradient(circle, red, blue);
+    }
+    .grad2 {
+      background: radial-gradient(ellipse, red, blue);
+    }
+    .grad3 {
+      background: radial-gradient(circle at top left, red, green, blue);
+    }
+    .grad4 {
+      background: radial-gradient(at 100% 100%, yellow, cyan, purple);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <table>
+      <tr>
+        <td class="grad1">
+          Два цвета circle по центру
+        </td>
+  
+        <td class="grad2">
+          Два цвета ellipse по центру
+        </td>
+  
+      </tr>
+      <tr>
+        <td class="grad3">
+          Три цвета circle центр слева вверху
+        </td>
+        <td class="grad4">
+          Три цвета ellipse центр справа внизу
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

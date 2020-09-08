@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html>
+<html lang=ru>
+<meta charset=utf-8>
+<style>
+  body{
+    background-color: cyan;
+  }
+  header{
+    text-align: center;
+  }
+  hr{
+    color: blue;
+    size: 10pt;
+    width: 90%;
+  }
+  .content{
+    position: relative;
+    width: 50%;
+    margin: 0px auto;
+  }
+  .yravnenie{
+    padding: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+
+<body>
+  <header>
+    <h3>Решение квадратного уравнения</h3>
+  </header>
+  <hr>
+  <div class="content">
+    <div class="yravnenie">
+      <p>Введите коэффициенты уравнения</p>
+      <form action="decide.php" method="POST">
+        <input type="text" step="any" name="value1">*X<sup>2</sup>+<input type="text" name="value2">*X+<input type="text"  name="value3">=0<br>
+        <input type="submit" value="Решить">
+      </form>
+    </div>
+  </div>
+  
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

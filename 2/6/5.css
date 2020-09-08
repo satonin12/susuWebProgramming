@@ -1,0 +1,36 @@
+/*Do not remove and do not change this string*/
+body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.header{
+    text-align: left;
+    background-color: grey;
+}
+.navigation{
+    background-color: rgb(170, 170, 170);
+}
+.block{
+    display: flex;
+    justify-content: row;
+}
+.menu{
+    float: left;
+    width: 30%;
+    background-color: rgb(51, 51, 51);
+    height: 100vh;
+}
+.content{
+    background-color: rgb(194, 194, 194);
+    height: 100vh;
+    width: 70%;
+}
+.footer{
+    text-align: left;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    background-color: grey;
+}
+/*Do not remove and do not change this string*/

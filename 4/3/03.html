@@ -1,0 +1,85 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+
+<head>
+	<meta charset=utf-8>
+	<title>Ввод и сортировка</title>
+	<style>
+		body {
+			background-color: rgb(247, 208, 109);
+			height: 100%;
+		}
+
+		.content {
+			position: relative;
+			width: 70%;
+			margin: 10px auto;
+			padding: 10px;
+			text-align: center;
+			background-color: gray;
+			line-height: 30px;
+		}
+
+		header {
+			text-align: center;
+		}
+
+		hr {
+			size: 10px;
+			width: 100%;
+			color: black;
+		}
+
+		#titl {
+			text-align: center;
+		}
+
+		#count {
+			width: 50px;
+		}
+
+		#number_add {
+			width: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="content">
+		<header>
+			<h3>Ввод и сортировка</h3>
+		</header>
+		<hr>
+		<div id="titl">Заполнение массива числами</div>
+
+		<label>Количество элементов</label><br>
+		<input type="text" value="0" readonly><br>
+
+		<label>Добавить число к массиву</label>
+		<input type="number">
+
+		<button>Добавить</button><br>
+		<button>Сортировать</button>
+		<div></div>
+		<div></div>
+	</div>
+	<script>
+		var inp = document.querySelectorAll('input'),
+		but = document.querySelectorAll('button'),
+		div = document.querySelectorAll('div'),
+		array = new Array;
+		but[0].onclick = e => {
+			array.push(inp[1].value);
+			inp[1].value = '';
+			inp[0].value = array.length;
+			div[2].textContent = 'Массив=' + array;
+		};
+		but[1].onclick = e => {
+			div[3].textContent = 'Сортированный=' + array.sort((a,b)=>{ return a-b });
+		}
+	</script>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

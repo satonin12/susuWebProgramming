@@ -1,0 +1,39 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+<head>
+	<title>Таблица с пронумерованными ячейками</title>
+	<meta charset="utf-8">
+	<style>
+	table{
+		border:1px solid black; 
+		style:"border-collapse: collapse; 
+		text-align: center";
+	}
+	tr, td{
+		border: 1px solid black;
+	}
+	</style>
+	
+	<script>
+		document.write('<table>');
+		for(var i=0; i<=4; i++) {
+			document.write('<tr >');
+			for(var j=0; j<=9;j++){
+				document.write('<td>'+i+'-'+j+'</td>');
+			}
+			document.write('</tr>');
+		}
+		document.write('</table>');
+	</script>
+</head>
+
+<body>
+	
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->
+
+
+

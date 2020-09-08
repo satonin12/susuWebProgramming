@@ -1,0 +1,36 @@
+/*Do not remove and do not change this string*/
+.scroll-table{
+    overflow: auto;
+    position: relative;
+    height: 75px;
+    width: 31%;
+}
+.table2{
+    border: 1px solid black;
+    position: absolute;
+    background-color: gray;
+    width: 100%;
+}
+tr,td{
+    border: 1px solid black;
+}
+.tdright{
+    text-align: right;
+}
+.table2 td{
+    width: 30%;
+}
+.table1 td{
+    width: 30%;
+}
+.table1{
+    background-color: aqua;
+    border: 1px solid black;
+    width: 30%;
+}
+.header{
+    font-size: 18pt;
+    text-align: center;
+}
+
+/*Do not remove and do not change this string*/

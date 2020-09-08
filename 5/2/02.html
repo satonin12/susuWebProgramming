@@ -1,0 +1,88 @@
+﻿<!DOCTYPE HTML>
+<!-- Do not remove and do not change this string -->
+<html lang=ru>
+<!-- сортировать таблицу -->
+
+<head>
+	<meta charset=utf-8>
+
+</head>
+
+<body>
+	<table border="1px" cellpadding="10px" name="mytab" id="mytab">
+		<thead bgcolor="aqua">
+			<th id="col1" align="center">Фамилия</th>
+			<th id="col2" align="center">Телефон</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Яковлев</td>
+				<td>7453217</td>
+			</tr>
+			<tr>
+				<td>Иванов</td>
+				<td>3453212</td>
+			</tr>
+			<tr>
+				<td>Бендер</td>
+				<td>8453212</td>
+			</tr>
+			<tr>
+				<td>Паниковский</td>
+				<td>6453212</td>
+			</tr>
+			<tr>
+				<td>Петров</td>
+				<td>8765432</td>
+			</tr>
+			<tr>
+				<td>Сидоров</td>
+				<td>5432345</td>
+			</tr>
+			<tr>
+				<td>Македонский</td>
+				<td>8765233</td>
+			</tr>
+			<tr>
+				<td>Иоанн 23</td>
+				<td>2345432</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		var mytab = document.getElementById("mytab");
+		var tbody = mytab.getElementsByTagName("tbody")[0];
+		var rows = tbody.querySelectorAll("tr");
+		mytab.onclick = function (e) {
+			if (e.target.tagName != "TH") {
+				return;
+			}
+			var index = e.target.cellIndex;
+			var sort = e.target.dataset.sort ^ 1;
+			var th = mytab.querySelectorAll("th")[+!index];
+			th.dataset.sort = 0;
+			e.target.classList[sort ? "add" : "remove"]("red");
+			e.target.dataset.sort = sort;
+			sortGrid(index, !sort);
+		};
+
+		function sortGrid(colNum, sort) {
+			[].slice.call(rows).sort(function (rowA, rowB) {
+				if (sort) {
+					return 0;
+				}
+				if (colNum) {
+					console.log(rowA.cells[colNum]);
+					return rowA.cells[colNum].innerHTML - rowB.cells[colNum].innerHTML;
+				} else {
+					return rowA.cells[colNum].innerHTML.localeCompare(rowB.cells[colNum].innerHTML, "ru");
+				}
+			}).forEach(function (row) {
+				tbody.appendChild(row);
+			});
+		};
+	</script>
+</body>
+
+</html>
+<!-- Do not remove and do not change this string -->

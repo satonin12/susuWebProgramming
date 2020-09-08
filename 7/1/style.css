@@ -1,0 +1,33 @@
+body{
+  background-color: gold;
+}
+.content{
+  position: relative;
+  width: 50%;
+  margin: 0px auto;
+  height: auto !important;
+  height: 100%;
+  padding: 0px;
+}
+.wrap{
+  background-color: yellow;
+  border: 3px solid red;
+  size: 4;
+  vertical-align: top;
+  height: 120px;
+  line-height: 40px;
+}
+.main{
+  float: left;
+}
+.field{
+  clear: both;
+  text-align: right;
+  line-height: 35px;
+  margin-left: 80px;
+}
+button{
+  color: blue;
+  width: 150px;
+  height: 40px;
+}
