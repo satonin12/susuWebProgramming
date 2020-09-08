@@ -1,0 +1,31 @@
+body {
+  background-color: wheat;
+}
+header {
+  text-align: center;
+}
+hr {
+  color: blue;
+  size: 10pt;
+  width: 90%;
+}
+.content {
+  display: block;
+}
+table {
+  border: 2px solid black;
+}
+td:hover {
+  background: #E2EEFF;
+}
+table td.active {
+  background: #6598C7;
+  color: #fff;
+  outline: 0;
+}
+tr td {
+  border: 1px solid black;
+}
+select {
+  width: 80px;
+}
