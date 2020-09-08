@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Стягивающее дерево</title>
+  <style type="text/css">
+    html, body{
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      overflow: hidden;
+    }
+    #ccanvas{
+      /* width: 100%;
+      height: 100%; */
+  }
+    canvas{
+      /* width: 100%;
+      height: 100%; */
+    }
+  </style>
+  <script>
+    var rXMax = document.documentElement.clientWidth;
+    var rYMax = document.documentElement.clientHeight;
+
+    console.log(rXMax, rYMax);
+  </script>
+</head>
+<body>
+  <div id="ccanvas">
+    <canvas id="canvas" ></canvas>
+  </div>
+  <script>
+
+    // document.getElementById('canvas').style.width = rXMax;
+    // document.getElementById('canvas').style.height = rYMax;
+    var ball = [];
+    var count = 40;
+
+    var canvas = document.getElementById("canvas");
+    canvas.width = document.body.clientWidth;
+    canvas.height = document.body.clientHeight;
+    console.log(canvas.style.width, canvas.style.height);
+    var context = canvas.getContext("2d");
+
+    function buildTree(array) {
+      const map = new Map(array.map(item => [item.id, item]))
+      for(var item of map.values()){
+        if(!map.has(item.parent)){
+          continue
+        }
+        const parent = map.get(item.parent)
+        parent.children = [...parent.children || [], item]
+      }
+      return [...map.values()].filter(item => !item.parent)
+    }
+
+
+    function drawBall(){
+
+    }
+
+    for(var i=0; i<=count; i++){
+
+      rX = parseInt(Math.random() * (rXMax-10) + 10);
+      rY = parseInt(Math.random() * (rXMax-10) + 10);
+
+      var r = parseInt(Math.random() * (255-1) + 1);
+      var g = parseInt(Math.random() * (255-1) + 1);
+      var b = parseInt(Math.random() * (255-1) + 1);
+
+      // console.log(i%3);
+      if(i%2 === 0) {
+        console.log(1)
+        ball[i] = {
+          id: i,
+          name: i,
+          parent: null,
+          x: rX,
+          y: rY,
+          dx: -1,
+          dy: 1,
+          color: 'rgb('+r+','+g+','+b+')',
+          r: 10
+        }
+      }else if(i%3===0){
+        console.log(2)
+
+        ball[i] = {
+          id: i,
+          name: i,
+          parent: null,
+          x: rX,
+          y: rY,
+          dx: 1,
+          dy: -1,
+          color: 'rgb('+r+','+g+','+b+')',
+          r: 10
+        }
+      }else{
+        console.log(3)
+
+        ball[i] = {
+          id: i,
+          name: i,
+          parent: null,
+          x: rX,
+          y: rY,
+          dx: -1,
+          dy: -1,
+          color: 'rgb('+r+','+g+','+b+')',
+          r: 10
+        }
+      }
+
+      // ball[i] = {
+      //   id: i,
+      //   name: i,
+      //   parent: null,
+      //   x: rX,
+      //   y: rY,
+      //   dx: 1,
+      //   dy: -1,
+      //   color: 'rgb('+r+','+g+','+b+')',
+      //   r: 10
+      // }
+
+      context.beginPath();
+      context.arc(ball[i].x, ball[i].y, ball[i].r, 0, Math.PI * 2);
+      context.fillStyle = ball[i].color;
+      context.fill();
+      context.restore();
+      context.stroke();
+      context.closePath();
+    }
+
+    const tree = buildTree(ball)
+    console.log(tree)
+
+    function draw(){
+      setTimeout(function(){
+
+        window.requestAnimationFrame(draw);
+        context.clearRect(0,0, rXMax, rYMax);
+        for(var i=0; i<=count; i++){
+          ball[i].x+=ball[i].dx;
+          ball[i].y+=ball[i].dy;
+          context.beginPath();
+          context.arc(ball[i].x, ball[i].y, ball[i].r, 0, Math.PI * 2);
+          context.fillStyle = ball[i].color;
+          context.fill();
+          context.restore();
+          context.stroke();
+          context.closePath();
+        }
+        //WORK
+        for(var i=0; i<=count; i++){
+          if(ball[i].x - ball[i].r/2>=rXMax){
+            // ball[i].x = 0;
+            ball[i].dx *= -1;
+          }
+          if(ball[i].x - ball[i].r/2<=0){
+            // ball[i].x = rXMax;
+            ball[i].dx *= -1;
+          }
+          if((ball[i].y + ball[i].dy) - ball[i].r/2 > rYMax){
+            // ball[i].y = 0;
+            ball[i].dy *= -1;
+          }
+          if((ball[i].y + ball[i].dy) - ball[i].r/2 < 0){
+            // ball[i].y = rYMax;
+            ball[i].dy *= -1;
+          }
+        }
+
+        for(var i=0; i<=count; i++){
+          for(var j=0; j<=count; j++){
+            if(i===j){
+              break;
+            }
+            var d = parseInt(Math.sqrt(Math.pow((tree[j].x-tree[i].x),2) + Math.pow(tree[j].y-tree[i].y,2)));
+            if(d<=150){
+              context.beginPath();
+              context.moveTo(ball[i].x, ball[i].y);
+              context.lineTo(ball[j].x, ball[j].y);
+              context.lineWidth = 5;
+              context.stroke();
+            }
+          }
+        }
+
+
+        // console.log(parseInt(Math.sqrt(Math.pow((tree[1].x-tree[0].x),2) + Math.pow(tree[1].y-tree[0].y,2))))
+
+      }, 1000/60);
+      // draw();
+    }
+     draw();
+
+  </script>
+</body>
+</html>
