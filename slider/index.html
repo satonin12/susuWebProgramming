@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slider</title>
+    <style>
+        body {
+            display: flex;
+            /* justify-content: center;
+            align-content: center;
+            align-items: center; */
+            flex-direction: column;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .block {
+            width: auto;
+            height: 100px;
+            margin: 10px;
+        }
+
+        #block3 img {
+            width: 500px;
+            height: 500px;
+        }
+
+        .footer {
+            margin-bottom: 300px;
+            width: 100px;
+            height: 300px;
+        }
+
+        img:hover {
+            box-shadow: 0 28px 64px rgba(24, 5, 196, 0.473), 0 28px 28px rgba(228, 12, 12, 0.22);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+
+        <div class="block" id="block1">
+            <img id="1" src="./img/1.jpg" onclick="replace(this.id);">
+
+        </div>
+        <div class="block" id="block2">
+            <img id="2" src="./img/2.jpg" onclick="replace(this.id);">
+
+        </div>
+        <div class="block" id="block3">
+            <img id="3" src="./img/3.jpg" onclick="replace(this.id);">
+
+        </div>
+        <div class="block" id="block4">
+            <img id="4" src="./img/4.jpg" onclick="replace(this.id);">
+
+        </div>
+        <div class="block" id="block5">
+            <img id="5" src="./img/5.jpg" onclick="replace(this.id);">
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function replace(event) {
+            var sc = document.getElementById(3).src;
+            var srcTmp = document.getElementById(event).src;
+            if (event != 3) {
+                document.getElementById(3).src = srcTmp;
+                document.getElementById(event).src = sc;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        summary {
+            border: 1px dotted black;
+        }
+
+        .content {
+            width: auto;
+            background-color: gray;
+            padding: 5px;
+        }
+
+        .det1 {
+            background-color: gray;
+            padding: 5px;
+        }
+
+        .border {
+            list-style: none;
+            padding: 0;
+        }
+
+        .border li {
+            font: "Trebushet MS", "Lucida Sans";
+            padding: 7px 20px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 10px solid #f05d22;
+            box-shadow: 2px -2px 5 px 0 rgba(0, 0, 0, .1),
+                -2px -2px 5px 0 rgba(0, 0, 0, .1),
+                2px 2px 5px 0 rgba(0, 0, 0, .1),
+                -2px 2px 5px 0 rgba(0, 0, 0, .1);
+            font-size: 20px;
+            letter-spacing: 2px;
+            transition: 0.3s all linear;
+
+        }
+
+        .border li:nth-child(2) {
+            border-color: #8bc63e;
+        }
+
+        .border li:nth-child(3) {
+            border-color: #fcba30;
+        }
+
+        .border li:nth-child(4) {
+            border-color: #1ccfc9;
+        }
+
+        .border li:nth-child(5) {
+            border-color: #493224;
+        }
+
+        .border li:hover {
+            border-left: 10px solid transparent;
+        }
+
+        .border li:nth-child(1):hover {
+            border-right: 10px solid #f05d22;
+        }
+
+        .border li:nth-child(2):hover {
+            border-right: 10px solid #8bc63e;
+        }
+
+        .border li:nth-child(3):hover {
+            border-right: 10px solid #fcba30;
+        }
+
+        .border li:nth-child(4):hover {
+            border-right: 10px solid #1ccfc9;
+        }
+
+        .border li:nth-child(5):hover {
+            border-right: 10px solid #493224;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+        <details>
+            <summary>Контакты</summary>
+            <p>Этот текст только для того <br>чтобы после details было что-то еще</p>
+            <summary>Контакты</summary>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&bull; Телефон 263754<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&bull; Почта uhty@mail.ru<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&bull; Скайп HappySmile<br>
+            <p>Этот текст только для того <br>чтобы после details было что-то еще</p>
+        </details>
+    </div>
+
+    <ol class="border">
+        <li><a href="#">Б.Керниган, Д.Ритчи, А.Фьюэр. Язык программирования Си. Задачи по языку Си. М.: Финансы и
+                статистика, 1985.</a></li>
+        <li><a href="#">Подбельский Вадим Валериевич, Фомин Сергей Сергеевич «Программирование на языке Си».</a></li>
+        <li><a href="#">Р.Берри, Б.Микинз. Язык Си: введение для программистов. М.: Финансы и статистика, 1988.</a></li>
+        <li><a href="#">М.И.Болски. Язык программирования Си. Справочник. М.:Радио и связь. 1988.</a></li>
+        <li><a href="#">С.О.Бочков, Д.М.Субботин. Язык программиравания Си для персонального компьютера. М.: Радио и
+                связь. 1990</a></li>
+        </ul>
+
+</body>
+
+</html>

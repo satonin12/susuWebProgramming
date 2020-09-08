@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Map Chelyabinsk</title>
+
+  <!-- <script src="http://code/jquery.com/jquery-1.8.3.js"></script> -->
+
+  <style>
+    html,
+    body {
+      height: 100%;
+      background-color: #FFDBDE;
+    }
+
+    .wrap {
+      position: relative;
+      width: 60%;
+      margin: 0px auto;
+      height: auto !important;
+      height: 100%;
+      min-height: 100%;
+      border-left: 1px solid black;
+      border-right: 1px solid black;
+    }
+
+    .content {
+      padding: 10px;
+      border: 1px solid green;
+      border-radius: 20px;
+    }
+
+    img {
+      /* width: 100%; */
+      /* margin: 0px; */
+      /* position: relative; */
+    }
+
+    /* map{
+      position: relative;
+      /* top: 0px; 
+      /* left: 0px; 
+      margin: 0px;
+    }
+    area{
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      margin: 0px;
+    }
+    */
+
+    area:focus {
+      border: 3px solid black;
+      outline: 2px solid black;
+      box-shadow: 5px solid black;
+    }
+
+    .header {
+      /* background: url("./img/background-slide1.svg") repeat-y; */
+
+      background-size: cover;
+      /* background-image: radial-gradient(circle, #f16e12, #9c1717); */
+      /* height: 15%; */
+    }
+
+    .container {
+      max-width: auto;
+      margin: auto;
+
+    }
+
+    header {
+      background-color: #FFDBDE;
+      margin: 0px;
+    }
+
+    .header {
+      margin: auto;
+      display: flex;
+      align-self: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      margin-bottom: 50px;
+      margin: 0 150px;
+    }
+
+    .logo {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 27px;
+      line-height: 33px;
+      margin-top: 23px;
+    }
+
+    .logo-point {
+      color: #FF5B5B;
+    }
+
+    .menu-list {
+      margin-top: 30px;
+    }
+
+    .menu-link {
+      font-family: 'Gilroy';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      text-decoration: none;
+      margin-left: 35px;
+      color: #000000;
+    }
+
+    .icons-menu {
+      margin-top: 28px;
+    }
+
+    .icons-link {
+      margin-left: 40px;
+    }
+    .f{
+      display: flex;
+      flex-direction: column;
+    }
+    .info{
+      position: absolute;
+      left: 0px;
+      top: 230px;
+      background-color: #FF5B5B;
+      width: auto;
+      height: auto;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header">
+
+        <div class="logo">
+          Влад Сатонин<em class="logo-point">.</em>
+        </div>
+
+        <div class="menu-list">
+          <a href="#" class="menu-link">СТУДЕНТ</a>
+          <a href="#" class="menu-link">ЮУрГУ</a>
+          <a href="#" class="menu-link">ИЕиТН</a>
+          <a href="#" class="menu-link">ЕТ-414</a>
+        </div>
+
+        <div class="icons-menu">
+          <a href="#" class="icons-link"><img src="./img/inst.svg" alt=""></a>
+          <a href="#" class="icons-link"><img src="./img/vk.svg" alt=""></a>
+
+        </div>
+
+      </div>
+
+    </div>
+    </div>
+  </header>
+  <!-- <div class="wrap"> -->
+  <!-- <div class="content"> -->
+  <h1>Карта сайта челябинск</h1>
+  <img src="./img/1.png" usemap='#figura' alt="map_chel">
+
+    <map name="figura">
+      <area class="Металлургический" title="Металлургический" shape="poly" coords="603,92,677,60,890,110,750,327,625,270"
+        href="https://ru.m/wikipedia.org/wiki/Металлургический_район_(Челябинск)" alt="Металлургический" onmouseover="handler(this.title);">
+      <area class="Курчатовский" title="Курчатовский" shape="poly"
+        coords="654,410,616,400,540,400,490,430,464,420,500,300,515,230,600,210,625,277,660,317"
+        href="https://ru.m/wikipedia.org/wiki/Курчатовский_район_(Челябинск)" alt="Курчатовский" onmouseover="handler(this.title);">
+      <area class="Калининский" title="Калининский" shape="poly"
+        coords="505,456,547,460,580,433,620,432,650,437,685,442,703,426,737,417,803,379,814,314,860,280,830,268,750,333,650,234,660,412,577,398,503,428"
+        href="https://ru.m/wikipedia.org/wiki/Калининский_район_(Челябинск)" alt="Калининский" onmouseover="handler(this.title);">
+      <area class="Центральный" title="Центральный" shape="poly"
+        coords="463,420,447,525,516,510,523,575,622,572,630,545,680,470,720,467,708,428,688,443,636,437,583,437,524,464,495,448,500,427"
+        href="https://ru.m/wikipedia.org/wiki/Центральный_район_(Челябинск)" alt="Центральный" onmouseover="handler(this.title);">
+      <area class="Ленинский" title="Ленинский" shape="poly"
+        coords="720,468,744,468,740,490,830,492,930,440,880,593,863,598,864,618,899,633,760,760,660,674"
+        href="https://ru.m/wikipedia.org/wiki/Ленинский_район_(Челябинск)" alt="Ленинский" onmouseover="handler(this.title);">
+      <area class="Трактозаводсккой" title="Трактозаводсккой" shape="poly"
+        coords="863,282,903,285,905,386,961,416,933,442,847,481,759,479,746,468,721,468,715,428,799,387,823,310,859,291"
+        href="https://ru.m/wikipedia.org/wiki/Трактозаводсккой_район_(Челябинск)" alt="Трактозаводсккой" onmouseover="handler(this.title);">
+      <area class="Советский" title="Советский" shape="poly"
+        coords="525,573,467,634,524,695,564,682,561,720,589,774,568,783,585,813,606,803,613,833,626,835,633,808,660,837,670,909,752,761,666,669,718,471,681,469,606,569"
+        href="https://ru.m/wikipedia.org/wiki/Советский_район_(Челябинск)" alt="Советский" onmouseover="handler(this.title);">
+    </map>
+    <div class="info">
+      <h3 id="title"></h3>
+      <p>Нажмите мышкой, чтобы перейти на википедию, соответсвующего района</p>
+    </div>
+
+  </div>
+  </div>
+
+  <script>
+    function handler (event){
+      console.log(event);
+      document.getElementById("title").textContent = event;
+    }
+  </script>
+
+</body>
+
+</html>
